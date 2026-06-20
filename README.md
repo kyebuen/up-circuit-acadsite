@@ -25,6 +25,6 @@ To further expand on this revelations, the **Academic Affairs Division** propose
 * Featuring multiple EEE and non-EEE subjects
 * A tiered question system, from beginners wanting to get the basics down, to practicing exam-level questions
 
-## Message
+## Messages
 
 * I do hope this site will be maintained and improved as time gets on. I also hope people do use the website to improve their academic performance. EEE life is hard, and I wanted to make it easier for everyone. Good luck. - Kenneth
