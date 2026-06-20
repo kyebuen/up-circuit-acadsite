@@ -2,13 +2,14 @@
    GLOBAL VARIABLES & RESET
    ========================================================================== */
 :root {
-    --bg-main: #0a1128;
-    --bg-sidebar: #070c1e;
-    --bg-login: #1e293b;
+    --bg-main: #0a1128;        /* Deep Navy */
+    --bg-sidebar: #070c1e;     /* Sidebar Navy */
+    --bg-login: #1e293b;       /* Login Container Navy */
     --text-light: #ffffff;
     --text-muted: #8fa0c4;
-    --accent-cyan: #38bdf8;
-    --border-color: #334155;
+    --accent-cyan: #38bdf8;    /* Unified Cyan */
+    --border-color: #334155;   /* Unified Border */
+    
     --font-ui: system-ui, -apple-system, sans-serif;
 }
 
@@ -21,7 +22,27 @@ body {
 }
 
 /* ==========================================================================
-   NAVIGATION & LAYOUT
+   LAYOUT CLASSES
+   ========================================================================== */
+
+/* Used for Course Content pages (sidebar layout) */
+.course-layout {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Used for Login page */
+.login-layout {
+    background-color: #0f172a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* ==========================================================================
+   NAVIGATION & COMPONENTS
    ========================================================================== */
 .navbar {
     display: flex;
@@ -49,7 +70,7 @@ body {
 .logout-btn:hover { background-color: var(--accent-cyan); color: var(--bg-main); }
 
 /* ==========================================================================
-   COURSE CATALOG & MODULE STYLES
+   DASHBOARD / CATALOG GRID
    ========================================================================== */
 .dashboard-container { padding: 40px; max-width: 1200px; margin: 0 auto; }
 
@@ -65,12 +86,7 @@ body {
     gap: 30px;
 }
 
-/* FIXED: Removes underlines and keeps colors consistent */
-.card-link {
-    text-decoration: none;
-    color: inherit;
-    display: block; /* Ensures the whole card area is clickable */
-}
+.card-link { text-decoration: none; color: inherit; display: block; }
 
 .card {
     background-color: var(--bg-sidebar);
@@ -78,12 +94,36 @@ body {
     border-radius: 8px;
     border: 1px solid var(--border-color);
     transition: all 0.2s ease;
-    height: 100%; /* Ensures all cards in a row are same height */
+    height: 100%;
 }
 
-.card:hover {
-    border-color: var(--accent-cyan);
-    transform: translateY(-2px); /* Subtle hover effect */
-}
-
+.card:hover { border-color: var(--accent-cyan); transform: translateY(-2px); }
 .card h3 { color: var(--accent-cyan); margin-bottom: 10px; }
+
+/* ==========================================================================
+   SIDEBAR (Only for Course Content Pages)
+   ========================================================================== */
+.sidebar { 
+    width: 340px; 
+    background-color: var(--bg-sidebar); 
+    border-right: 1px solid var(--border-color); 
+    padding: 25px 30px; 
+    overflow-y: auto; 
+}
+
+.main-content { 
+    flex-grow: 1; 
+    padding: 50px; 
+    overflow-y: auto; 
+    background-color: var(--bg-main); 
+}
+
+.top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 35px; }
+.back-link { color: var(--text-muted); text-decoration: none; cursor: pointer; }
+.back-link:hover { color: var(--accent-cyan); }
+.course-title { color: var(--accent-cyan); font-weight: 700; font-size: 20px; }
+.unit-title { color: var(--accent-cyan); font-size: 13px; font-weight: 700; text-transform: uppercase; margin: 35px 0 15px 0; }
+
+.tiles { display: grid; grid-template-columns: 35px 1fr; row-gap: 14px; font-size: 15px; }
+.tiles a { color: var(--text-light); text-decoration: none; cursor: pointer; }
+.tiles a:hover { color: var(--accent-cyan); }
