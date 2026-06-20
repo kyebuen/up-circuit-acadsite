@@ -1,0 +1,32 @@
+<div class="topic-content">
+    <div class="formula-row">
+        <div class="math-box">$$ v = iR $$</div>
+        <div class="math-box">$$ G = \frac{1}{R} = \frac{i}{v} $$</div>
+    </div>
+
+    <div class="circuit-container">
+        <svg viewBox="0 0 400 200" style="width: 100%; max-width: 400px;">
+            <path d="M 100 50 L 100 150 M 300 50 L 300 150 M 100 50 L 300 50 M 100 150 L 300 150" stroke="#8fa0c4" fill="none" stroke-width="2"/>
+            <circle cx="100" cy="100" r="25" stroke="#00b4d8" fill="none" stroke-width="2"/>
+            <text x="95" y="105" fill="#ffffff" font-family="sans-serif">+</text>
+            <text x="40" y="105" fill="#8fa0c4" font-family="sans-serif">30 V</text>
+            <path d="M 300 50 L 320 60 L 280 80 L 320 100 L 280 120 L 300 130" stroke="#00b4d8" fill="none" stroke-width="2"/>
+            <text x="330" y="105" fill="#8fa0c4" font-family="sans-serif">5 kΩ</text>
+        </svg>
+    </div>
+
+    <div class="problem-area">
+        <div class="input-row">
+            <span>v =</span> 
+            <input type="text" class="input-box" oninput="check_tol(this, 30)"> <span>v</span>
+        </div>
+        <div class="input-row">
+            <span>i =</span> 
+            <input type="text" class="input-box" oninput="check_tol(this, 6)"> <span>mA</span>
+        </div>
+        <div class="input-row">
+            <span>p =</span> 
+            <input type="text" class="input-box" oninput="check_tol(this, 180)"> <span>mW absorbed</span>
+        </div>
+    </div>
+</div>
