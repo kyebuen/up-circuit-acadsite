@@ -28,7 +28,7 @@ document.getElementById('login-form').addEventListener('submit', async function(
 
         if (response.ok) {
             // Success: Set the session badge and redirect
-            sessionStorage.setItem('isLoggedIn', 'true');
+            sessionStorage.setItem('isLoggedIn', 'true'); // Session Token
             
             errorMessageDiv.style.color = "#34d399"; 
             errorMessageDiv.textContent = "Login successful! Redirecting...";
