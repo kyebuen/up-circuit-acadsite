@@ -1,0 +1,115 @@
+/* This is named styles.css as it serves as the design sheet for the website. Some code weirdness will happen if this is named differently. */
+
+/* Reset basic styles and set up a clean, modern font */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif; /* Explicitly set to a consistent sans-serif font */
+}
+
+/* Center everything on the screen */
+body {
+    background-color: #0f172a;
+    color: #f8fafc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Wrapper keeps the logo and the box aligned perfectly */
+.page-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+}
+
+/* Logo (placed outside and on top of the container) */
+.main-logo {
+    max-width: 200px;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+/* Header */
+.login-header {
+    margin-bottom: 1.5rem;
+}
+
+.login-header h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #38bdf8; /* Uniform blue color */
+    text-align: center;
+    font-weight: 700;
+}
+
+/* Style the login box container */
+.login-container {
+    background-color: #1e293b;
+    padding: 2.5rem;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 400px;
+    border: 1px solid #334155;
+}
+
+/* Inputs and Labels (username and password layout) */
+.input-group {
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group label {
+    font-size: 0.75rem;
+    color: #94a3b8;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.input-group input {
+    background-color: #0f172a;
+    border: 1px solid #334155;
+    color: #f8fafc;
+    padding: 0.75rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.2s;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: #38bdf8;
+}
+
+/* Log-In Button */
+.login-btn {
+    background-color: #38bdf8;
+    color: #0f172a;
+    border: none;
+    padding: 0.75rem;
+    width: 100%;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.login-btn:hover {
+    background-color: #7dd3fc;
+}
+
+/* Error Message (error password) */
+.error {
+    color: #f87171;
+    font-size: 0.85rem;
+    margin-top: 1rem;
+    text-align: center;
+}
