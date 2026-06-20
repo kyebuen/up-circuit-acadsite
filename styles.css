@@ -1,115 +1,90 @@
-/* This is named styles.css as it serves as the design sheet for the website. Some code weirdness will happen if this is named differently. */
-
-/* Reset basic styles and set up a clean, modern font */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif; /* Explicitly set to a consistent sans-serif font */
+/* ==========================================================================
+   GLOBAL VARIABLES & RESET
+   ========================================================================== */
+:root {
+    --bg-main: #0a1128;         /* Deep Navy */
+    --bg-sidebar: #070c1e;      /* Sidebar Navy */
+    --bg-login: #1e293b;        /* Login Container Navy */
+    --text-light: #ffffff;
+    --text-muted: #8fa0c4;
+    --accent-cyan: #38bdf8;     /* Unified Cyan */
+    --border-color: #334155;    /* Unified Border */
+    
+    --font-ui: system-ui, -apple-system, sans-serif;
+    --font-tech: "SFMono-Regular", Consolas, monospace;
 }
 
-/* Center everything on the screen */
-body {
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: var(--font-ui); }
+
+/* ==========================================================================
+   LAYOUT CLASSES (Apply these to your <body> tag)
+   ========================================================================== */
+
+/* Add this class to your LOGIN page <body> */
+.login-layout {
     background-color: #0f172a;
-    color: #f8fafc;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
 }
 
-/* Wrapper keeps the logo and the box aligned perfectly */
-.page-wrapper {
+/* Add this class to your COURSE page <body> */
+.course-layout {
+    background-color: var(--bg-main);
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    padding: 20px;
+    height: 100vh;
+    overflow: hidden;
 }
 
-/* Logo (placed outside and on top of the container) */
-.main-logo {
-    max-width: 200px;
-    height: auto;
-    margin-bottom: 1rem;
-}
-
-/* Header */
-.login-header {
-    margin-bottom: 1.5rem;
-}
-
-.login-header h2 {
-    margin: 0;
-    font-size: 1.5rem;
-    color: #38bdf8; /* Uniform blue color */
-    text-align: center;
-    font-weight: 700;
-}
-
-/* Style the login box container */
+/* ==========================================================================
+   LOGIN COMPONENTS
+   ========================================================================== */
 .login-container {
-    background-color: #1e293b;
+    background-color: var(--bg-login);
     padding: 2.5rem;
     border-radius: 8px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
     width: 100%;
     max-width: 400px;
-    border: 1px solid #334155;
+    border: 1px solid var(--border-color);
 }
 
-/* Inputs and Labels (username and password layout) */
-.input-group {
-    margin-bottom: 1.5rem;
-    display: flex;
-    flex-direction: column;
-}
+.login-header h2 { color: var(--accent-cyan); text-align: center; margin-bottom: 1.5rem; }
+.input-group { margin-bottom: 1.5rem; display: flex; flex-direction: column; }
+.input-group label { font-size: 0.75rem; color: #94a3b8; margin-bottom: 0.5rem; text-transform: uppercase; }
+.input-group input { background-color: var(--bg-main); border: 1px solid var(--border-color); color: white; padding: 0.75rem; border-radius: 4px; }
 
-.input-group label {
-    font-size: 0.75rem;
-    color: #94a3b8;
-    margin-bottom: 0.5rem;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-}
+.login-btn { background-color: var(--accent-cyan); color: #0f172a; border: none; padding: 0.75rem; width: 100%; border-radius: 4px; font-weight: 600; cursor: pointer; }
 
-.input-group input {
-    background-color: #0f172a;
-    border: 1px solid #334155;
-    color: #f8fafc;
-    padding: 0.75rem;
+/* ==========================================================================
+   COURSE COMPONENTS (Sidebar & Content)
+   ========================================================================== */
+.sidebar { width: 340px; background-color: var(--bg-sidebar); border-right: 1px solid var(--border-color); padding: 25px 30px; overflow-y: auto; }
+.main-content { flex-grow: 1; padding: 50px; overflow-y: auto; background-color: var(--bg-main); }
+
+.top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 35px; }
+.back-link { color: var(--text-muted); text-decoration: none; cursor: pointer; }
+.course-title { color: var(--accent-cyan); font-weight: 700; font-size: 20px; }
+.unit-title { color: var(--accent-cyan); font-size: 13px; font-weight: 700; text-transform: uppercase; margin: 35px 0 15px 0; }
+
+/* ==========================================================================
+   SHARED ELEMENTS (Inputs & Tiles)
+   ========================================================================== */
+.input-box {
+    font-family: var(--font-tech);
+    background-color: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--border-color);
+    color: #fff;
+    padding: 6px 8px;
     border-radius: 4px;
-    font-size: 1rem;
-    transition: border-color 0.2s;
-}
-
-.input-group input:focus {
     outline: none;
-    border-color: #38bdf8;
+    transition: border-color 0.15s ease;
 }
 
-/* Log-In Button */
-.login-btn {
-    background-color: #38bdf8;
-    color: #0f172a;
-    border: none;
-    padding: 0.75rem;
-    width: 100%;
-    border-radius: 4px;
-    font-size: 1rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background-color 0.2s;
-}
+.input-box:focus { border-color: var(--accent-cyan); }
+.input-box.correct { border-color: #22c55e; background-color: rgba(34, 197, 94, 0.1); }
 
-.login-btn:hover {
-    background-color: #7dd3fc;
-}
-
-/* Error Message (error password) */
-.error {
-    color: #f87171;
-    font-size: 0.85rem;
-    margin-top: 1rem;
-    text-align: center;
-}
+.tiles { display: grid; grid-template-columns: 35px 1fr; row-gap: 14px; font-size: 15px; }
+.tiles a { color: var(--text-light); text-decoration: none; cursor: pointer; }
+.tiles a:hover { color: var(--accent-cyan); }
