@@ -1,1 +1,58 @@
-a
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EEE 123 - UP Circuit</title>
+    
+    <script src="../../../guard.js" defer></script>
+    
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+
+    <div class="sidebar stack">
+        <div class="top">
+            <a href="../../../courses.html" class="back-link">&lt; back</a>
+            <span class="course-title">EEE 123</span>
+        </div>
+
+        <div class="unit-title">Unit 1</div>
+        <div class="tiles">
+            <div>1a</div> <div><a onclick="loadTopic('1a')">Ohm's Law</a></div>
+            <div>1b</div> <div><a onclick="loadTopic('1b')">Voltage & Current Laws</a></div>
+            <div>2</div>  <div><a onclick="loadTopic('2')">Equivalence & Division</a></div>
+            <div>3</div>  <div><a onclick="loadTopic('3')">Nodal Analysis</a></div>
+            <div>4a</div> <div><a onclick="loadTopic('4a')">Superposition</a></div>
+            <div>4b</div> <div><a onclick="loadTopic('4b')">Thevenin's Theorem</a></div>
+            <div>5a</div> <div><a onclick="loadTopic('5a')">Norton & Maximum Power</a></div>
+            <div>5b</div> <div><a onclick="loadTopic('5b')">Source Transformation</a></div>
+        </div>
+
+        <div class="unit-title">Unit 2</div>
+        <div class="tiles">
+            <div>6</div>  <div><a onclick="loadTopic('6')">Diodes</a></div>
+            <div>7</div>  <div><a onclick="loadTopic('7')">Bipolar Junction Transistors</a></div>
+            <div>8</div>  <div><a onclick="loadTopic('8')">MOS Field-Effect Transistors</a></div>
+            <div>9</div>  <div><a onclick="loadTopic('9')">Logic Circuits</a></div>
+            <div>10</div> <div><a onclick="loadTopic('10')">Operational Amplifiers</a></div>
+        </div>
+        
+        <div class="unit-title">Unit 3</div>
+        <div class="tiles">
+            <div>11</div> <div><a onclick="loadTopic('11')">Sinusoids & Phasors</a></div>
+            <div>12</div> <div><a onclick="loadTopic('12')">Sinusoidal Steady-State Analysis</a></div>
+            <div>13</div> <div><a onclick="loadTopic('13')">AC Power Analysis</a></div>
+            <div>14</div> <div><a onclick="loadTopic('14')">Transformers</a></div>
+        </div>
+    </div>
+
+    <div class="main-content" id="content-area">
+        <h2 style="color: #666; margin-top: 50px; text-align: center;">Select a topic from the left to begin.</h2>
+    </div>
+
+</body>
+</html>
