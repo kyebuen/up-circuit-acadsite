@@ -2,19 +2,26 @@
    GLOBAL VARIABLES & RESET
    ========================================================================== */
 :root {
-    --bg-main: #0a1128;         /* Deep Navy */
-    --bg-sidebar: #070c1e;      /* Sidebar Navy */
-    --bg-login: #1e293b;        /* Login Container Navy */
+    --bg-main: #0a1128;        /* Deep Navy */
+    --bg-sidebar: #070c1e;     /* Sidebar Navy */
+    --bg-login: #1e293b;       /* Login Container Navy */
     --text-light: #ffffff;
     --text-muted: #8fa0c4;
-    --accent-cyan: #38bdf8;     /* Unified Cyan */
-    --border-color: #334155;    /* Unified Border */
+    --accent-cyan: #38bdf8;    /* Unified Cyan */
+    --border-color: #334155;   /* Unified Border */
     
     --font-ui: system-ui, -apple-system, sans-serif;
     --font-tech: "SFMono-Regular", Consolas, monospace;
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; font-family: var(--font-ui); }
+
+/* Apply global background and text color */
+body {
+    background-color: var(--bg-main);
+    color: var(--text-light);
+    min-height: 100vh;
+}
 
 /* ==========================================================================
    LAYOUT CLASSES (Apply these to your <body> tag)
@@ -44,8 +51,8 @@
     max-width: 200px;
     width: 100%;
     height: auto;
-    margin: 0 auto 1rem auto; /* The 'auto' here centers the image */
-    display: block;           /* This is required for margin: auto to work */
+    margin: 0 auto 1rem auto;
+    display: block;
 }
 
 .login-container {
