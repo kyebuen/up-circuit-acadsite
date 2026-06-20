@@ -40,6 +40,13 @@
 /* ==========================================================================
    LOGIN COMPONENTS
    ========================================================================== */
+.main-logo {
+    max-width: 200px; /* Adjust this value if you want it smaller */
+    width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
 .login-container {
     background-color: var(--bg-login);
     padding: 2.5rem;
