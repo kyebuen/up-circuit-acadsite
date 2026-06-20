@@ -1,45 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script src="guard.js" defer></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UP Circuit - Dashboard</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
     <header class="navbar">
         <div class="nav-brand">
             <img src="logo.png" alt="UP Circuit Logo" class="nav-logo">
             <span class="nav-title">UP Circuit Academic Website</span>
         </div>
-        <a href="index.html" class="logout-btn">Log Out</a>
+        <a href="login.html" class="logout-btn">Log Out</a>
     </header>
 
     <main class="dashboard-container">
-        <section class="welcome-banner">
+        
+        <div class="welcome-banner">
             <h1>Welcome Back!</h1>
-        </section>
+        </div>
 
         <div class="modules-grid">
-            <div class="card">
-                <h3>UP Circuit Academic Drive</h3>
-                <p>Access the Academic Drive, where sample examinations and notes are compiled.</p>
-                <a href="https://drive.google.com/drive/folders/1ydWzjunzNEkGJZvg51j8C4k2Z-04U-Jx?usp=sharing" target="_blank" rel="noopener noreferrer" class="action-btn">Open</a>
-            </div>
+            
+            <a href="courses.html" class="card-link">
+                <div class="card">
+                    <h3>UP Circuit Academic Drive</h3>
+                    <p>Access the Academic Drive, where sample examinations and notes are compiled.</p>
+                </div>
+            </a>
 
-            <div class="card">
-                <h3>Academic Drive Submission</h3>
-                <p>Submit your previous notes and samplexes for the expansion of the academic drive!</p>
-                <a href="https://forms.gle/C5xF9JydAzert7E6A" target="_blank" rel="noopener noreferrer" class="action-btn">Open</a>
-            </div>
+            <a href="submit.html" class="card-link">
+                <div class="card">
+                    <h3>Academic Drive Submission</h3>
+                    <p>Submit your previous notes and samplex for the expansion of the academic drive!</p>
+                </div>
+            </a>
 
-            <div class="card">
-                <h3>Interactive Quizset</h3>
-                <p>Practice different problems from different EEE (and non-EEE) courses!</p>
-                <a href="courses.html" class="action-btn">Open</a>
-            </div>
+            <a href="quiz.html" class="card-link">
+                <div class="card">
+                    <h3>Interactive Quizset</h3>
+                    <p>Practice different problems from different EEE (and non-EEE) courses!</p>
+                </div>
+            </a>
+
         </div>
     </main>
+
 </body>
 </html>
