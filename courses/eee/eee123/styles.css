@@ -1,0 +1,134 @@
+/* Core Variables mapped directly to your website's main theme */
+:root {
+    --bg-main: #0a1128;        /* Deep navy background from your catalog/dashboard */
+    --bg-sidebar: #070c1e;     /* Slightly darker navy for sidebar depth */
+    --text-light: #ffffff;     /* White for body text */
+    --text-muted: #8fa0c4;     /* Soft slate blue for numbers and secondary data */
+    --accent-cyan: #00b4d8;    /* Vibrant cyan from your "Course Catalog" headers */
+    --border-color: #131f42;   /* Dark navy border to separate panels cleanly */
+    
+    /* Modern Tech Typography Stack */
+    --font-ui: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif;
+    --font-tech: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Monaco, monospace;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    height: 100vh;
+    background-color: var(--bg-main);
+    color: var(--text-light);
+    font-family: var(--font-ui);
+    -webkit-font-smoothing: antialiased;
+    letter-spacing: -0.01em;
+    overflow: hidden; /* Prevents whole page scrolling */
+}
+
+/* Sidebar Layout */
+.sidebar {
+    width: 340px;
+    background-color: var(--bg-sidebar);
+    border-right: 1px solid var(--border-color);
+    padding: 25px 30px;
+    overflow-y: auto; /* Allows scrolling inside sidebar */
+}
+
+/* Header Area (< back     EEE 123) */
+.top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 35px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.back-link {
+    color: var(--text-muted);
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 14px;
+    transition: color 0.15s ease;
+}
+
+.back-link:hover {
+    color: var(--accent-cyan);
+    text-decoration: underline;
+}
+
+.course-title {
+    color: var(--accent-cyan); /* Matching your catalog header text color */
+    font-weight: 700;
+    font-size: 20px;
+    letter-spacing: 0.02em;
+}
+
+/* Unit Titles (Unit 1, Unit 2) */
+.unit-title {
+    color: var(--accent-cyan);
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    opacity: 0.8;
+    margin: 35px 0 15px 0;
+}
+
+/* The Grid Layout for the topics */
+.tiles {
+    display: grid;
+    grid-template-columns: 35px 1fr; /* Precise alignment for indices */
+    row-gap: 14px;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+/* Topic Identifiers (1a, 1b, 2, etc.) */
+.tiles div:nth-child(odd) {
+    font-family: var(--font-tech); 
+    color: var(--text-muted); /* Clean data contrast */
+    text-align: right; 
+    padding-right: 12px;
+    font-size: 14px;
+}
+
+.tiles a {
+    color: var(--text-light); /* Clean white links to match dashboard structure */
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 0.15s ease;
+}
+
+.tiles a:hover {
+    color: var(--accent-cyan); /* Highlights cyan on hover */
+    text-decoration: underline;
+}
+
+/* Right Side Content Area */
+.main-content {
+    flex-grow: 1;
+    padding: 50px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg-main);
+}
+
+/* Engineering-grade inputs for data fields */
+.input-box {
+    font-family: var(--font-tech); 
+    background-color: rgba(255, 255, 255, 0.03); /* Subtle translucent dark fill */
+    border: 1px solid var(--border-color);
+    color: #fff;
+    padding: 6px 8px;
+    font-size: 15px;
+    width: 85px;
+    margin: 5px;
+    border-radius: 4px;
+    outline: none;
+    transition: border-color 0.15s ease;
+}
+
+.input-box:focus {
+    border-color: var(--accent-cyan);
+}
