@@ -1,9 +1,21 @@
 <div class="topic-container" style="font-family: sans-serif; color: #e2e8f0; max-width: 800px; margin: 0 auto; line-height: 1.6;">
     
     <div class="topic-content">
-        <div class="formula-row" style="display: flex; gap: 20px; justify-content: center; margin-bottom: 30px;">
-            <div class="math-box">$$ v = iR $$</div>
-            <div class="math-box">$$ G = \frac{1}{R} = \frac{i}{v} $$</div>
+        
+        <div class="formula-section" style="display: flex; gap: 20px; justify-content: center; margin-bottom: 35px; flex-wrap: wrap;">
+            <div class="math-card" style="background-color: #1e293b; padding: 15px 25px; border-radius: 8px; border: 1px solid #334155; text-align: center; min-width: 200px; box-shadow: 0 4px 6px rgba(0,0,0,0.2);">
+                <strong style="color: #00b4d8; display: block; margin-bottom: 10px; font-size: 0.95rem; letter-spacing: 0.5px;">OHM'S LAW</strong>
+                <div style="margin: 8px 0;">$$V = I \times R$$</div>
+                <div style="margin: 8px 0;">$$I = \frac{V}{R}$$</div>
+                <div style="margin: 8px 0;">$$R = \frac{V}{I}$$</div>
+            </div>
+            
+            <div class="math-card" style="background-color: #1e293b; padding: 15px 25px; border-radius: 8px; border: 1px solid #334155; text-align: center; min-width: 200px; box-shadow: 0 4px 6px rgba(0,0,0,0.2);">
+                <strong style="color: #00b4d8; display: block; margin-bottom: 10px; font-size: 0.95rem; letter-spacing: 0.5px;">ELECTRIC POWER</strong>
+                <div style="margin: 8px 0;">$$P = V \times I$$</div>
+                <div style="margin: 8px 0;">$$P = I^2 \times R$$</div>
+                <div style="margin: 8px 0;">$$P = \frac{V^2}{R}$$</div>
+            </div>
         </div>
 
         <div style="background-color: white; padding: 10px 20px; border-radius: 8px; max-width: 400px; margin: 0 auto 40px auto; display: block; box-shadow: 0 4px 6px rgba(0,0,0,0.3);">
@@ -22,19 +34,19 @@
             <p style="margin-top: 0; color: #f8fafc; font-weight: bold;">Use the circuit diagram above to determine the following electrical properties:</p>
             
             <div class="input-row" style="margin-bottom: 15px; display: flex; align-items: center; gap: 10px;">
-                <span style="min-width: 30px; font-weight: bold;">v =</span> 
+                <span style="min-width: 30px; font-weight: bold;">V =</span> 
                 <input type="text" class="input-box" oninput="check_tol(this, 30)" style="padding: 6px; border-radius: 4px; border: 1px solid #475569; background-color: #0f172a; color: #fff; width: 80px; text-align: center;"> 
                 <span>V</span>
             </div>
             
             <div class="input-row" style="margin-bottom: 15px; display: flex; align-items: center; gap: 10px;">
-                <span style="min-width: 30px; font-weight: bold;">i =</span> 
+                <span style="min-width: 30px; font-weight: bold;">I =</span> 
                 <input type="text" class="input-box" oninput="check_tol(this, 6)" style="padding: 6px; border-radius: 4px; border: 1px solid #475569; background-color: #0f172a; color: #fff; width: 80px; text-align: center;"> 
                 <span>mA</span>
             </div>
             
             <div class="input-row" style="margin-bottom: 5px; display: flex; align-items: center; gap: 10px;">
-                <span style="min-width: 30px; font-weight: bold;">p =</span> 
+                <span style="min-width: 30px; font-weight: bold;">P =</span> 
                 <input type="text" class="input-box" oninput="check_tol(this, 180)" style="padding: 6px; border-radius: 4px; border: 1px solid #475569; background-color: #0f172a; color: #fff; width: 80px; text-align: center;"> 
                 <span>mW absorbed</span>
             </div>
