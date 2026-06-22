@@ -24,6 +24,7 @@ To further expand on this revelations, the **Academic Affairs Division** propose
 * Ways to access the academic drive and to contribute to it.
 * Featuring multiple EEE and non-EEE subjects
 * A tiered question system, from beginners wanting to get the basics down, to practicing exam-level questions
+* Integrating the use of CircuitTikZ as a way of easily transfering drawn circuits to the interactive quizset
 
 ## Messages
 
